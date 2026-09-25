@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Contact Vision Pursuit Group for vending machine sales, location partnerships, and business inquiries.">
+<meta name="theme-color" content="#030a14">
+<title>Contact | Vision Pursuit Group</title>
+<link rel="icon" type="image/webp" href="assets/vpg-mark.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>(function(d){d.classList.add('js');var nat=('CSSViewTransitionRule' in window)&&/^https?:$/.test(location.protocol);d.classList.add(nat?'pt-native':'pt-fallback');if(!nat)d.classList.add('pt-enter')})(document.documentElement)</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Vision Pursuit Group home"><img src="assets/vpg-mark.webp" alt="VPG" width="86" height="40"></a>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="machines.html">Our Machines</a>
+      <a href="partners.html">Location Partners</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact<span class="nav-ind" aria-hidden="true"></span></a>
+      <a class="btn btn-gold nav-cta" href="contact.html?type=Machine%20Quote">Get a Quote <span data-icon="arrow"></span></a>
+    </nav>
+    <a class="btn btn-outline-gold btn-sm header-cta" href="contact.html?type=Machine%20Quote">Get a Quote <span data-icon="arrow"></span></a>
+    <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero contact-hero">
+    <div class="scene" aria-hidden="true"><div class="scene-lights"></div></div>
+    <div class="container page-hero-grid">
+      <div class="page-hero-copy">
+        <p class="eyebrow">Contact</p>
+        <h1>Let's Work Together</h1>
+        <p class="lead">Have questions about vending machines, location partnerships, wrap designs, or machine configurations? Reach out to Vision Pursuit Group.</p>
+        <ul class="contact-points">
+          <li><span data-icon="mail"></span><div><strong>Email Us</strong><a href="mailto:contact@visionpursuitgroup.com">contact@visionpursuitgroup.com</a></div></li>
+          <li><span data-icon="message"></span><div><strong>Send a Message</strong><span>Use the inquiry form to tell us what you're looking for.</span></div></li>
+          <li><span data-icon="briefcase"></span><div><strong>Business Inquiries</strong><span>Machine purchases, partnerships, wholesale, and general business.</span></div></li>
+          <li><span data-icon="pin"></span><div><strong>Based in California</strong><span>Serving business opportunities from a Southern California base.</span></div></li>
+        </ul>
+        <div class="actions"><a class="btn btn-gold" href="#inquiry">Get in Touch <span data-icon="arrow"></span></a></div>
+      </div>
+
+      <div class="form-card" id="inquiry" data-inquiry>
+        <!-- form view -->
+        <div class="form-view" data-form-view>
+          <h2>Send an Inquiry</h2>
+          <p class="form-intro">Tell us a little about your business and what you need.</p>
+          <form id="inquiry-form" action="https://formspree.io/f/mvkgqlpa" method="POST">
+            <!-- Formspree special fields: _subject (set by app.js per inquiry type) and _gotcha (spam honeypot) -->
+            <input type="hidden" name="_subject" value="VPG Website Inquiry">
+            <div class="hp" aria-hidden="true"><label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+            <div class="form-grid">
+              <div class="field"><label for="name">Name</label><input id="name" name="Name" autocomplete="name" required minlength="2" maxlength="120" aria-describedby="name-error"><span class="field-error" id="name-error" aria-live="polite"></span></div>
+              <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="email-error"><span class="field-error" id="email-error" aria-live="polite"></span></div>
+              <div class="field"><label for="company">Company <span class="optional">(optional)</span></label><input id="company" name="Company" autocomplete="organization" maxlength="160"></div>
+              <div class="field"><label for="inquiry-type">Inquiry Type</label>
+                <select id="inquiry-type" name="Inquiry Type" required>
+                  <option>Machine Quote</option>
+                  <option>Location Partnership</option>
+                  <option>Supplier / Wholesale</option>
+                  <option selected>General Inquiry</option>
+                </select>
+              </div>
+              <div class="field full"><label for="message">Message</label><textarea id="message" name="Message" placeholder="Tell us what you're looking for." required minlength="10" maxlength="5000" aria-describedby="message-error"></textarea><span class="field-error" id="message-error" aria-live="polite"></span></div>
+              <div class="field full form-alert" role="alert" data-form-alert hidden>
+                <span class="form-alert-icon" data-icon="info"></span>
+                <div><strong>Your inquiry couldn't be sent.</strong><span data-form-alert-text></span> Please try again, or email us directly at <a href="mailto:contact@visionpursuitgroup.com">contact@visionpursuitgroup.com</a>.</div>
+              </div>
+              <div class="field full form-foot">
+                <button class="btn btn-gold" type="submit" data-submit><span class="btn-spinner" aria-hidden="true"></span><span data-submit-label>Send Inquiry</span> <span data-icon="arrow"></span></button>
+                <span class="small">Prefer email? Write to <a href="mailto:contact@visionpursuitgroup.com">contact@visionpursuitgroup.com</a>.</span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- success view (shown after a successful submission) -->
+        <div class="form-view form-success" data-success-view hidden>
+          <div class="success-mark" aria-hidden="true"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="23"/><path d="M15 27l7.5 7.5L37 19"/></svg></div>
+          <h2 tabindex="-1" data-success-title>Thank you — your inquiry is on its way.</h2>
+          <p class="form-intro" data-success-text>Your inquiry has been sent to Vision Pursuit Group.</p>
+          <dl class="success-summary">
+            <div><dt>Inquiry type</dt><dd data-success-type></dd></div>
+            <div><dt>Reply to</dt><dd data-success-email></dd></div>
+          </dl>
+          <div class="actions">
+            <button class="btn btn-outline" type="button" data-send-another>Send another inquiry</button>
+            <a class="btn btn-gold" href="index.html">Back to Home <span data-icon="arrow"></span></a>
+          </div>
+          <p class="small success-note">Need to add something? Email <a href="mailto:contact@visionpursuitgroup.com">contact@visionpursuitgroup.com</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html"><img src="assets/vpg-full-logo.webp" alt="Vision Pursuit Group LLC" width="220" height="73" loading="lazy"></a>
+      <p>Automated retail solutions — trading card vending machines and location partnerships.</p>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h2>Explore</h2>
+      <a href="index.html">Home</a><a href="machines.html">Our Machines</a><a href="partners.html">Location Partners</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-col">
+      <h2>Contact</h2>
+      <a href="mailto:contact@visionpursuitgroup.com">contact@visionpursuitgroup.com</a>
+      <span>California, United States</span>
+    </div>
+  </div>
+  <div class="container"><div class="footer-bottom"><span>© 2026 Vision Pursuit Group LLC</span><a href="contact.html?type=Machine%20Quote">Get a Quote →</a></div></div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
